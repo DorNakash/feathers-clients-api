@@ -2,13 +2,21 @@
 // 
 // See http://mongoosejs.com/docs/models.html
 // for more of what you can do here.
+require('mongoose-type-email');
+
+
+
 module.exports = function (app) {
   const modelName = 'clients';
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const schema = new Schema({
-    text: { type: String, required: true }
-  }, {
+    name: { type: String, required: true },
+    email: {type: mongooseClient.SchemaTypes.Email, required: [true, 'Email is required'], unique: true,
+  },
+    phoneNumber: {type: String, required: true,},
+  },
+   {
     timestamps: true
   });
 

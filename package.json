@@ -49,7 +49,9 @@
     "helmet": "^4.6.0",
     "mongodb-core": "^3.2.7",
     "mongoose": "^6.1.2",
+    "mongoose-type-email": "^1.1.2",
     "serve-favicon": "^2.5.0",
+    "validator": "^13.7.0",
     "winston": "^3.3.3"
   },
   "devDependencies": {
