@@ -1,11 +1,11 @@
 
-
+const validEmail = require('../../hooks/valid-email');
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [],
+    create: [validEmail()],
     update: [],
     patch: [],
     remove: []
@@ -16,8 +16,8 @@ module.exports = {
     find: [],
     get: [],
     create: [],
-    update: [],
-    patch: [],
+    update: [validEmail()],
+    patch: [validEmail()],
     remove: []
   },
 
